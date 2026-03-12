@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="Paras Security Systems Website">
-  <link href="./assets/images/favicon/favicon.png" rel="icon">
+  <link href="assets/images/favicon/favicon.jpeg" rel="icon">
   <title>Paras Security Systems Website</title>
 
   <link rel="stylesheet"
@@ -30,11 +30,11 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
             <!-- Light Logo (Visible Initially) -->
-            <img src="assets/images/logo/logo-bg-remove.png" style="width:50%; display:block;" id="logo-light"
+            <img src="assets/images/logo/paraslogo-bg-remove.png" style="width:37%; margin-top: 10px;" id="logo-light"
               alt="logo">
 
             <!-- Dark Logo (Hidden Initially) -->
-            <img src="assets/images/logo/logo.png" style="width:50%; display:none;" id="logo-dark" alt="logo">
+            <img src="assets/images/logo/paraslogo.jpeg" style="width:16%; display:none;" id="logo-dark" alt="logo">
           </a>
           <button class="navbar-toggler" type="button">
             <span class="menu-lines"><span></span></span>
@@ -55,7 +55,7 @@
               </li>
 
               <li class="nav__item">
-                <a href="products.html" class="nav__item-link">Products</a>
+                <a href="audit-reporting.html" class="nav__item-link">Audit Reporting</a>
               </li>
 
               <li class="nav__item">
@@ -80,7 +80,7 @@
                   <i class="icon-phone"></i>
                 </div>
                 <div>
-                  <a class="phone__link d-block" href="tel:919821980899">+91 98219 80899</a>
+                  <a class="phone__link d-block" href="tel:919819980899">+91 98199 80899</a>
                   <a class="email__link d-block" href="mailto:info@parassecurity.com">info@parassecurity.com</a>
                 </div>
               </div>
@@ -103,85 +103,116 @@
     <!-- ==========================
         contact layout 1
     =========================== -->
-    <section class="contact-layout1 py-0 mt--100">
+    <section class="contact-layout1 py-0 mt--100" id="contactus">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="contact-panel d-flex flex-wrap">
+
+              <!-- Left Info Panel -->
               <div class="contact-panel__info bg-overlay bg-overlay-primary">
-                <div class="bg-img"><img src="assets/images/banners/2.jpg" alt="banner"></div>
-                <h4 class="contact-panel__title color-white">Tailored Solutions For Your Security Priorities</h4>
-                <p class="contact-panel__desc color-white">We take great pride in everything that we do, control over
-                  products allows us to ensure our customers receive the best quality service.
+                <div class="bg-img">
+                  <img src="assets/images/banners/2.jpg" alt="banner">
+                </div>
+
+                <h4 class="contact-panel__title color-white">
+                  Tailored Solutions For Your Security Priorities
+                </h4>
+
+                <p class="contact-panel__desc color-white">
+                  We take great pride in everything that we do, control over products allows us to ensure our customers
+                  receive the best quality service.
                 </p>
+
                 <ul class="contact__list list-unstyled mb-40">
-                  <li style="font-weight: normal;">
-                    <a href="tel:+919821980899"><b>Emergency Line:</b> +91 98219 80899</a>
+
+                  <li>
+                    <a href="tel:+919819980899">
+                      <b>Emergency Line:</b> +91 98199 80899
+                    </a>
                   </li>
-                  <li style="font-weight: normal;">
-                    <a href="#"><b>Location:</b> Flat No-8, Hemprabha Society, Near Central Bank of India, Chittaranjan
-                      Road Vile Parle (East), Mumbai - 400057</a>
+
+                  <li>
+                    <a href="#">
+                      <b>Location:</b> Flat No-8, Hemprabha Society, Near Central Bank of India, Chittaranjan Road Vile
+                      Parle (East), Mumbai - 400057
+                    </a>
                   </li>
-                  <li style="font-weight: normal;">
-                    <a href="contact-us.html"><b>Work Hours:</b> Mon - Sat: 9:30 am - 18:30 pm</a>
+
+                  <li>
+                    <b>Work Hours:</b> Mon - Sat: 9:30 am - 6:30 pm
                   </li>
+
                 </ul>
-                <a href="contact-us.html" class="btn btn__white btn__xl btn__block justify-content-between">
-                  <span>Get Started Now</span> <i class="icon-arrow-right"></i>
+
+                <a href="contact-us.html" class="btn btn__white btn__xl btn__block">
+                  Get Started Now
                 </a>
               </div>
-              <form class="contact-panel__form" method="post" action="assets/php/contact.php" id="contactForm">
+
+
+              <!-- Contact Form -->
+              <form class="contact-panel__form" id="contactForm">
+
                 <div class="row">
-                  <div class="col-sm-12">
+
+                  <div class="col-12">
                     <h4 class="contact-panel__title">Get In Touch</h4>
-                    <p class="contact-panel__desc mb-30">We take great pride in everything that we do, control over
-                      products allows us to ensure customers receive the best quality service and highest standards, you
-                      need a dedicated team of specialists.
+
+                    <p class="contact-panel__desc mb-30">
+                      Fill the form and our team will contact you shortly.
                     </p>
                   </div>
-                  <div class="col-sm-6 col-md-6 col-lg-6">
+
+
+                  <div class="col-md-6">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Name" id="contact-name" name="contact-name"
-                        required>
+                      <input type="text" class="form-control" id="name" placeholder="Your Name" required>
                     </div>
-                  </div><!-- /.col-lg-6 -->
-                  <div class="col-sm-6 col-md-6 col-lg-6">
+                  </div>
+
+                  <div class="col-md-6">
                     <div class="form-group">
-                      <input type="email" class="form-control" placeholder="Email" id="contact-email"
-                        name="contact-email" required>
+                      <input type="email" class="form-control" id="email" placeholder="Your Email" required>
                     </div>
-                  </div><!-- /.col-lg-6 -->
-                  <div class="col-sm-6 col-md-6 col-lg-6">
+                  </div>
+
+                  <div class="col-md-6">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Phone" id="contact-Phone"
-                        name="contact-phone" required>
+                      <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
                     </div>
-                  </div><!-- /.col-lg-6 -->
-                  <div class="col-sm-6 col-md-6 col-lg-6">
+                  </div>
+
+                  <div class="col-md-6">
                     <div class="form-group">
-                      <select class="form-control">
-                        <option value="0">Select Your services</option>
-                        <option value="1">service 1</option>
-                        <option value="2">service 2</option>
+                      <select class="form-control" id="service">
+                        <option>Select Service</option>
+                        <option>Security Guard</option>
+                        <option>CCTV Installation</option>
+                        <option>Fire Safety</option>
+                        <option>Home Security</option>
                       </select>
                     </div>
-                  </div><!-- /.col-lg-6 -->
+                  </div>
+
                   <div class="col-12">
                     <div class="form-group">
-                      <textarea class="form-control" placeholder="Additional Details" id="contact-message"
-                        name="contact-message"></textarea>
+                      <textarea class="form-control" id="message" placeholder="Additional Details"></textarea>
                     </div>
+
                     <button type="submit" class="btn btn__secondary btn__xl mt-10">
-                      <i class="icon-arrow-right"></i> <span>Submit Request</span>
+                      Submit Request
                     </button>
-                    <div class="contact-result"></div>
-                  </div><!-- /.col-lg-12 -->
-                </div><!-- /.row -->
+                  </div>
+
+                </div>
+
               </form>
+
             </div>
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
+          </div>
+        </div>
+      </div>
     </section><!-- /.contact layout 1 -->
 
     <!-- ======================
@@ -334,7 +365,7 @@
     <!-- ========================
       Footer
     ========================== -->
-    <footer class="footer">
+    <footer style="margin-top: 100px;" class="footer">
 
       <!-- Footer Primary -->
       <div class="footer-primary">
@@ -343,8 +374,8 @@
 
             <!-- About Company -->
             <div class="col-sm-12 col-md-12 col-lg-3">
-              <div class="footer-widget-contact">
-                <h3 class="footer-logo color-white mb-20">PSS</h3>
+              <div class="footer-widget-contact" style="margin-top: -25px;">
+                <img src="./assets/images/logo/paraslogo-bg-remove.png" style="width: 70%; margin-left: -30px;"></img>
                 <p>
                   Keep your home or business safe with CCTV systems designed to provide 24/7 surveillance and peace of
                   mind.
@@ -362,9 +393,9 @@
                   <ul class="list-unstyled">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Our Services</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="contact-us.html">Get a Free Quote</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html#raq">Get a Free Quote</a></li>
+                    <li><a href="audit-reporting.html">Audit Reporting</a></li>
                     <li><a href="contact-us.html">Contact</a></li>
                   </ul>
                 </nav>
@@ -466,7 +497,69 @@
       }
     });
   </script>
-</body>
 
+  <!-- EmailJS Integration -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("BeP39MfcSk89-URkQ"); // Replace with your EmailJS public key
+    })();
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent default form submission
+
+      // Collect form values
+      var templateParams = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        service: document.getElementById("service").value,
+        message: document.getElementById("message").value
+      };
+
+      // Send email via EmailJS
+      emailjs.send("service_ts8hnl4", "template_j8rvt0k", templateParams)
+        .then(function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Thank you! Your request has been sent.");
+          document.getElementById("contactForm").reset(); // Reset form
+        }, function (error) {
+          console.log("FAILED...", error);
+          alert("Oops! Something went wrong. Please try again.");
+        });
+    });
+  </script>
+
+  <!-- WhatsApp Integration -->
+  <script>
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+
+      e.preventDefault();
+
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var service = document.getElementById("service").value;
+      var message = document.getElementById("message").value;
+
+      var whatsappNumber = "7208645176";
+
+      var text =
+        "New Contact Form Inquiry:%0A%0A" +
+        "Name: " + name + "%0A" +
+        "Email: " + email + "%0A" +
+        "Phone: " + phone + "%0A" +
+        "Service: " + service + "%0A" +
+        "Message: " + message;
+
+      var whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + text;
+
+      window.open(whatsappURL, "_blank");
+
+    });
+
+  </script>
+</body>
 
 </html>
