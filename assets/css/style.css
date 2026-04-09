@@ -8239,3 +8239,322 @@ textarea.form-control {
     padding: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
+
+/* Paras Security Systems Chatbot */
+
+
+/* Floating Button */
+.chat-btn {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  background: #ffffff;
+  padding: 10px 16px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: 0.3s;
+}
+
+.chat-btn:hover {
+  transform: scale(1.06);
+}
+
+.chat-btn img {
+  width: 22px;
+  margin-right: 8px;
+}
+
+/* Chat Box */
+.chat-box {
+  position: fixed;
+  bottom: 80px;
+  right: 18px;
+  width: 340px;
+  height: 460px;
+  background: #efeae2;
+  border-radius: 12px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+.chat-header {
+  background: #075e54;
+  color: #fff;
+  padding: 12px 14px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Body */
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* FIXED spacing */
+}
+
+/* Messages */
+.bot-msg, .user-msg {
+  padding: 8px 10px; /* REDUCED padding */
+  border-radius: 8px;
+  max-width: 78%;
+  font-size: 13px;
+  line-height: 1.4;
+  animation: fadeInUp 0.25s ease;
+}
+
+/* Bot */
+.bot-msg {
+  background: #ffffff;
+  color: #111; /* DARK TEXT */
+  align-self: flex-start;
+}
+
+/* User */
+.user-msg {
+  background: #dcf8c6;
+  color: #000; /* DARK TEXT */
+  align-self: flex-end;
+}
+
+/* Footer */
+.chat-footer {
+  display: flex;
+  padding: 8px;
+  background: #f0f0f0;
+  align-items: center;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 13px;
+}
+
+.chat-footer button {
+  margin-left: 6px;
+  border: none;
+  background: #075e54;
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.chat-footer button:hover {
+  transform: scale(1.1);
+}
+
+/* Quick Buttons */
+.quick-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.quick-buttons button {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #111; /* DARK TEXT */
+  transition: 0.2s;
+}
+
+.quick-buttons button:hover {
+  background: #075e54;
+  color: #fff;
+}
+
+/* Typing Indicator */
+.typing {
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  display: inline-flex;
+  gap: 3px;
+  align-self: flex-start;
+}
+
+.typing span {
+  width: 5px;
+  height: 5px;
+  background: #555;
+  border-radius: 50%;
+  animation: bounce 1.3s infinite;
+}
+
+.typing span:nth-child(2) { animation-delay: 0.2s; }
+.typing span:nth-child(3) { animation-delay: 0.4s; }
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.3; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* ===============================
+   CUSTOM LOGO (navbar-brand2)
+================================= */
+
+.navbar-brand2 {
+  display: flex !important;
+  align-items: center;
+  line-height: normal !important;
+  height: auto !important;
+}
+
+/* Default (Desktop) */
+.navbar-brand2 img {
+  max-height: 120px;
+  margin-top: 10px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dark logo controlled */
+.navbar-brand2 .logo-dark {
+  max-height: 70px;
+}
+
+/* ===============================
+   HEADER STATES
+================================= */
+
+/* Transparent header (big logo) */
+.header-transparent .navbar-brand2 img {
+  max-height: 130px;
+}
+
+/* Sticky header (scroll shrink) */
+.is-sticky.navbar .navbar-brand2 img {
+  max-height: 60px !important;
+  margin-top: 0;
+  transform: scale(0.95);
+  animation: logoShrink 0.4s ease;
+}
+
+/* ===============================
+   MOBILE NAVBAR FIX
+================================= */
+
+@media (max-width: 991px) {
+
+  /* Reduce navbar height */
+  .header .navbar,
+  .header-transparent .navbar {
+    height: 70px !important;
+  }
+
+  /* Fix logo alignment */
+  .navbar-brand2 {
+    line-height: normal !important;
+    margin-left: 10px;
+  }
+
+  /* Resize logo */
+  .navbar-brand2 img {
+    max-height: 45px !important;
+    margin-top: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .navbar-brand2 img {
+    max-height: 40px !important;
+  }
+}
+
+/* Extra small */
+@media (max-width: 400px) {
+  .navbar-brand2 img {
+    max-height: 35px !important;
+  }
+}
+
+/* ===============================
+   HAMBURGER MENU FIX
+================================= */
+
+/* When menu opens */
+.navbar-collapse.menu-opened ~ .navbar-brand2 img {
+  max-height: 45px !important;
+}
+
+/* ===============================
+   LOGO SWITCH (LIGHT / DARK)
+================================= */
+
+.logo-dark {
+  display: none;
+}
+
+.header-transparent .logo-light {
+  display: inline-block;
+}
+
+.header-transparent .logo-dark {
+  display: none;
+}
+
+.is-sticky .logo-light {
+  display: none;
+}
+
+.is-sticky .logo-dark {
+  display: inline-block;
+}
+
+/* ===============================
+   ANIMATIONS
+================================= */
+
+/* Hover zoom */
+.navbar-brand2:hover img {
+  transform: scale(1.05);
+}
+
+/* Smooth shrink animation */
+@keyframes logoShrink {
+  from {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
