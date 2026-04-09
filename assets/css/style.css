@@ -8558,3 +8558,56 @@ textarea.form-control {
     opacity: 1;
   }
 }
+
+/* ===============================
+   FOOTER CONTACT ALIGNMENT
+================================= */
+
+.footer-widget-contact {
+  text-align: left;
+}
+
+/* Paragraph spacing */
+.footer-widget-contact .footer-text {
+  margin-top: 8px;
+  margin-bottom: 18px;
+  line-height: 1.6;
+  color: #9b9b9b;
+}
+
+/* Title spacing */
+.footer-widget-contact .footer-widget__title {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+/* First title no extra top */
+.footer-widget-contact .footer-widget__title:first-child {
+  margin-top: 0;
+}
+
+/* Email styling */
+.footer-widget-contact a {
+  color: #65b530;
+  word-break: break-word;
+}
+
+/* ===============================
+   MOBILE FIX
+================================= */
+
+@media (max-width: 768px) {
+
+  .footer-widget-contact {
+    text-align: left;
+  }
+
+  .footer-widget-contact .footer-text {
+    margin-bottom: 15px;
+  }
+
+  .footer-widget-contact .footer-widget__title {
+    margin-top: 15px;
+  }
+}
