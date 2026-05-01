@@ -15,6 +15,72 @@
   <link rel="stylesheet" href="assets/css/libraries.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/chatbot.css">
+
+  <style>
+    .project-filters .filter-btn {
+      background: #fff;
+      border: none;
+      padding: 12px 25px;
+      margin: 10px;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .project-filters .filter-btn:hover {
+      background: #65b530;
+      color: #fff;
+    }
+
+    .project-filters .filter-btn.active {
+      background: #65b530;
+      color: #fff;
+    }
+
+    .project-item {
+      display: none;
+      /* IMPORTANT: hide everything by default */
+    }
+
+    .project-item {
+      display: none;
+    }
+
+    .pagination a.active {
+      background: #65b530;
+      color: #fff !important;
+      /* padding: 6px 12px; */
+      border-radius: 5px;
+    }
+
+    /* Reduce space below filter buttons section */
+    .filter-buttons {
+      margin-bottom: 20px !important;
+    }
+
+    /* Remove extra top space from project grid */
+    .projects-grid {
+      padding-top: 20px !important;
+      margin-top: 0 !important;
+    }
+
+    /* Remove Bootstrap row extra spacing if any */
+    .projects-grid .row {
+      margin-top: 0 !important;
+    }
+
+    /* Optional: tighter spacing on mobile */
+    @media (max-width: 768px) {
+      .filter-buttons {
+        margin-bottom: 10px !important;
+      }
+
+      .projects-grid {
+        padding-top: 10px !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -109,6 +175,19 @@
       </div><!-- /.container -->
     </section><!-- /.page-title -->
 
+    <!-- FILTER BUTTONS -->
+    <section class="project-filters text-center" style="padding:40px 0;">
+      <div class="container">
+
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="school">Schools / Colleges</button>
+        <button class="filter-btn" data-filter="residency">Residential</button>
+        <button class="filter-btn" data-filter="hospital">Hospitals</button>
+        <button class="filter-btn" data-filter="industry">Industries</button>
+
+      </div>
+    </section>
+
     <!-- ======================
       Blog Grid
     ========================= -->
@@ -117,28 +196,39 @@
         <div class="row">
 
           <!-- Project 1 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 project-item page-1" data-category="industry">
             <div class="post-item">
               <div class="post__img" style="height:250px;overflow:hidden;">
                 <a href="#">
-                  <img src="assets/test/paras-projects-p1.jpg" style="width:100%;height:100%;object-fit:cover;"
-                    alt="CCTV installation Andheri" loading="lazy">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/047/844/032/large_2x/cctv-camera-is-installed-in-the-garden-with-blur-green-tree-background-for-monitor-and-safety-system-control-around-that-area-photo.jpg"
+                    style="width:100%;height:100%;object-fit:cover;" alt="CCTV installation Andheri" loading="lazy">
                 </a>
                 <div class="post__meta-cat">
-                  <a href="#">Residential CCTV</a>
+                  <a href="#">Nursery Security</a>
                 </div>
               </div>
               <div class="post__body">
                 <h4 class="post__title">
-                  <a href="#">Complete Home CCTV Installation in Andheri West</a>
+                  <a href="#">Samartha Greens Vile Parle</a>
                 </h4>
                 <div class="post__meta d-flex">
-                  <span class="post__meta-date">Feb 12, 2024</span>
-                  <div class="post__meta-author"><a href="#">SecureVision Team</a></div>
+                  <span class="post__meta-date">Vile Parle</span>
+                  <div class="post__meta-author"><a href="#">Nursery/Commercial</a></div>
                 </div>
                 <p class="post__desc">
-                  Installed a 6-camera HD surveillance system for a residential building in Andheri West.
-                  The system includes night vision cameras, mobile monitoring, and remote playback access.
+                  <b>Project Overview:</b>
+                  <br>Installed a 32-channel CCTV surveillance system across the nursery, office and godown areas.
+                <ul></ul>
+                <b>Scope of Work:</b>
+                <ul>
+                  <li>Installation of CP PLUS high-resolution cameras</li>
+                  <li>Deployment of PSS and Dhua systems</li>
+                  <li>Coverage of office, nursery, & storage areas</li>
+                </ul>
+                <b>Result:</b>
+                <br> Enhanced overall security with clear monitoring across all operational zones, ensuring better
+                safety and surveillance.
                 </p>
                 <a href="#" class="btn btn__secondary btn__outlined">
                   <i class="icon-arrow-right"></i>
@@ -149,7 +239,7 @@
           </div>
 
           <!-- Project 2 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 project-item page-1" data-category="residency">
             <div class="post-item">
               <div class="post__img" style="height:250px;overflow:hidden;">
                 <a href="#">
@@ -157,22 +247,30 @@
                     alt="Office CCTV installation BKC" loading="lazy">
                 </a>
                 <div class="post__meta-cat">
-                  <a href="#">Office Security</a>
+                  <a href="#">Residential Security</a>
                 </div>
               </div>
               <div class="post__body">
                 <h4 class="post__title">
-                  <a href="#">Corporate CCTV Surveillance Setup in BKC</a>
+                  <a href="#">Residential Project - Satara</a>
                 </h4>
                 <div class="post__meta d-flex">
-                  <span class="post__meta-date">Jan 30, 2024</span>
-                  <div class="post__meta-author"><a href="#">SecureVision Team</a></div>
+                  <span class="post__meta-date">Satara</span>
+                  <div class="post__meta-author"><a href="#">Residential (Bungalow)</a></div>
                 </div>
                 <p class="post__desc">
-                  Deployed a 16-camera IP surveillance system in a corporate office at Bandra Kurla Complex
-                  with centralized monitoring and secure cloud backup for recorded footage.
+                  <b>Project Overview:</b>
+                  <br>Installed a complete CCTV system for residential security.
+                <ul></ul>
+                <b>Scope of Work:</b>
+                <ul>
+                  <li>32-channel CCTV installation</li>
+                  <li>Full property coverage</li>
+                </ul>
+                <b>Result:</b>
+                <br> Provided comprehensive surveillance ensuring safety and peace of mind for the homeowners.
                 </p>
-                <a href="#" class="btn btn__secondary btn__outlined">
+                <a href="#" class="btn btn__secondary btn__outlined" style="margin-top:80px">
                   <i class="icon-arrow-right"></i>
                   <span>View Project</span>
                 </a>
@@ -181,7 +279,7 @@
           </div>
 
           <!-- Project 3 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 project-item page-1" data-category="industry">
             <div class="post-item">
               <div class="post__img" style="height:250px;overflow:hidden;">
                 <a href="#">
@@ -189,20 +287,32 @@
                     alt="Shop CCTV Dadar" loading="lazy">
                 </a>
                 <div class="post__meta-cat">
-                  <a href="#">Retail Security</a>
+                  <a href="#">Trust Security</a>
                 </div>
               </div>
               <div class="post__body">
                 <h4 class="post__title">
-                  <a href="#">Retail Shop CCTV Installation in Dadar Market</a>
+                  <a href="#">Vile Parle Mahila Sangh (Trust)</a>
                 </h4>
                 <div class="post__meta d-flex">
-                  <span class="post__meta-date">Jan 18, 2024</span>
-                  <div class="post__meta-author"><a href="#">SecureVision Team</a></div>
+                  <span class="post__meta-date">Vile Parle</span>
+                  <div class="post__meta-author"><a href="#">Institutional</a></div>
                 </div>
                 <p class="post__desc">
-                  Installed compact indoor surveillance cameras for a retail clothing shop in Dadar.
-                  The system provides real-time monitoring and theft prevention capabilities.
+                  <b>Problem:</b>
+                <ul style="margin-top:-18px">
+                  <li>Poor image quality</li>
+                  <li>No audio support</li>
+                  <li>Incomplete coverage</li>
+                </ul>
+                <b>Scope of Work:</b>
+                <ul>
+                  <li>Installed high-resolution cameras</li>
+                  <li>Enabled audio functionality</li>
+                  <li>Optimized camera placement for full coverage</li>
+                </ul>
+                <b>Result:</b>
+                <br>Significantly improved clarity, monitoring capability, and overall system effectiveness.
                 </p>
                 <a href="#" class="btn btn__secondary btn__outlined">
                   <i class="icon-arrow-right"></i>
@@ -213,7 +323,7 @@
           </div>
 
           <!-- Project 4 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 project-item page-1" data-category="industry">
             <div class="post-item">
               <div class="post__img" style="height:250px;overflow:hidden;">
                 <a href="#">
@@ -221,20 +331,30 @@
                     alt="Apartment CCTV Powai" loading="lazy">
                 </a>
                 <div class="post__meta-cat">
-                  <a href="#">Apartment Security</a>
+                  <a href="#">Agricultural Security</a>
                 </div>
               </div>
               <div class="post__body">
                 <h4 class="post__title">
-                  <a href="#">Apartment Complex CCTV Setup in Powai</a>
+                  <a href="#">Samartha Greens - Karjat</a>
                 </h4>
                 <div class="post__meta d-flex">
-                  <span class="post__meta-date">Dec 20, 2023</span>
-                  <div class="post__meta-author"><a href="#">SecureVision Team</a></div>
+                  <span class="post__meta-date">Karjat</span>
+                  <div class="post__meta-author"><a href="#">Agricultural/Polyhouse</a></div>
                 </div>
                 <p class="post__desc">
-                  Installed 24 surveillance cameras across entrances, parking areas, and corridors
-                  in a residential apartment complex in Powai to enhance security monitoring.
+                  <b>Project Overview:</b>
+                  <br>Executed a large-scale security setup including CCTV surveillance and solar integration.
+                <ul></ul>
+                <b>Scope of Work:</b>
+                <ul>
+                  <li>Installed 32-channel CCTV system</li>
+                  <li>Covered polyhouse and godown areas</li>
+                  <li>Installed solar plant for power support</li>
+                </ul>
+                <b>Result:</b>
+                <br>Enabled continuous monitoring with reliable power backup, improving operational control and
+                security.
                 </p>
                 <a href="#" class="btn btn__secondary btn__outlined">
                   <i class="icon-arrow-right"></i>
@@ -245,7 +365,7 @@
           </div>
 
           <!-- Project 5 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 project-item page-1" data-category="school">
             <div class="post-item">
               <div class="post__img" style="height:250px;overflow:hidden;">
                 <a href="#">
@@ -258,15 +378,24 @@
               </div>
               <div class="post__body">
                 <h4 class="post__title">
-                  <a href="#">Warehouse CCTV Surveillance in Navi Mumbai</a>
+                  <a href="#">LJ. NJ. College</a>
                 </h4>
                 <div class="post__meta d-flex">
-                  <span class="post__meta-date">Dec 10, 2023</span>
-                  <div class="post__meta-author"><a href="#">SecureVision Team</a></div>
+                  <span class="post__meta-date">Mumbai</span>
+                  <div class="post__meta-author"><a href="#">Educational Institution</a></div>
                 </div>
                 <p class="post__desc">
-                  Designed and installed a large-scale CCTV system covering warehouse entry points,
-                  loading docks, and storage areas for improved operational security.
+                  <b>Project Overview:</b>
+                  <br>Providing ongoing AMC (Annual Maintenance Contract) services.
+                <ul></ul>
+                <b>Scope of Work:</b>
+                <ul>
+                  <li>Regular system maintenance</li>
+                  <li>Periodic inspections</li>
+                  <li>Timely issue resolution</li>
+                </ul>
+                <b>Result:</b>
+                <br>Ensured uninterrupted system performance and long-term reliability.
                 </p>
                 <a href="#" class="btn btn__secondary btn__outlined">
                   <i class="icon-arrow-right"></i>
@@ -277,7 +406,7 @@
           </div>
 
           <!-- Project 6 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 project-item page-1" data-category="industry">
             <div class="post-item">
               <div class="post__img" style="height:250px;overflow:hidden;">
                 <a href="#">
@@ -285,20 +414,236 @@
                     alt="School CCTV installation Thane" loading="lazy">
                 </a>
                 <div class="post__meta-cat">
-                  <a href="#">Institution Security</a>
+                  <a href="#">Retail Security</a>
                 </div>
               </div>
               <div class="post__body">
                 <h4 class="post__title">
-                  <a href="#">School Campus CCTV Security in Thane</a>
+                  <a href="#">Shivkeerti Jewellers</a>
                 </h4>
                 <div class="post__meta d-flex">
-                  <span class="post__meta-date">Nov 28, 2023</span>
-                  <div class="post__meta-author"><a href="#">SecureVision Team</a></div>
+                  <span class="post__meta-date">Mumbai</span>
+                  <div class="post__meta-author"><a href="#">Retail (Jewellery Shop)</a></div>
                 </div>
                 <p class="post__desc">
-                  Implemented a campus-wide surveillance system with 32 cameras covering classrooms,
-                  entrances, and playground areas to ensure student safety and monitoring.
+                  <b>Problem:</b>
+                  <br>Outdated surveillance system.
+                <ul></ul>
+                <b>Scope of Work:</b>
+                <ul>
+                  <li>Upgraded to HD and IP cameras</li>
+                  <li>Installed modern surveillance system</li>
+                </ul>
+                <b>Result:</b>
+                <br>Improved security with high-definition monitoring and better reliability.
+                </p>
+                <a href="#" class="btn btn__secondary btn__outlined" style="margin-top:60px">
+                  <i class="icon-arrow-right"></i>
+                  <span>View Project</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 project-item page-2" data-category="industry">
+            <div class="post-item">
+              <div class="post__img" style="height:250px;overflow:hidden;">
+                <a href="#"><img src="assets/test/paras-projects-p2.jpg"
+                    style="width:100%;height:100%;object-fit:cover;"></a>
+                <div class="post__meta-cat"><a href="#">Industrial Security</a></div>
+              </div>
+              <div class="post__body">
+                <h4 class="post__title">
+                  <a href="#">Siddarth Group Enterprises</a>
+                </h4>
+                <div class="post__meta d-flex">
+                  <span>Mumbai</span>
+                  <div><a href="#">Industrial</a></div>
+                </div>
+                <p class="post__desc">
+                  <b>Problem:</b><br>
+                  Old HD camera system.
+                  <br>
+                  <b>Solution:</b><br>
+                  Upgraded to IP-based CCTV system
+                  <br>
+                  <b>Result:</b><br>
+                  Improved video quality, system efficiency, and scalability.
+                </p>
+                <a href="#" class="btn btn__secondary btn__outlined"><span>View Project</span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 8 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 project-item page-2" data-category="residency">
+            <div class="post-item">
+              <div class="post__img" style="height:250px;overflow:hidden;">
+                <a href="#"><img src="assets/test/paras-projects-p3.jpg"></a>
+                <div class="post__meta-cat"><a href="#">Residential Security</a></div>
+              </div>
+              <div class="post__body">
+                <h4 class="post__title">
+                  <a href="#">Eversweet Society</a>
+                </h4>
+                <div class="post__meta d-flex">
+                  <span class="post__meta-date">Mumbai</span>
+                  <div class="post__meta-author"><a href="#">Residential Society</a></div>
+                </div>
+                <p class="post__desc">
+                  <b>Problem:</b>
+                  <br>Outdated surveillance system.
+                  <br>
+                  <b>Solution:</b><br>
+                  Upgraded surveillance infrastructure
+                  <br>
+                  <b>Result:</b><br>
+                  Enhanced security coverage and system performance for residents.
+                </p>
+                <a href="#" class="btn btn__secondary btn__outlined">
+                  <i class="icon-arrow-right"></i>
+                  <span>View Project</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 9 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 project-item page-2" data-category="school">
+            <div class="post-item">
+              <div class="post__img" style="height:250px;overflow:hidden;">
+                <a href="#"><img src="assets/test/paras-projects-p4.jpg"></a>
+                <div class="post__meta-cat"><a href="#">Educational Security</a></div>
+              </div>
+              <div class="post__body">
+                <h4 class="post__title">
+                  <a href="#">Sapan Classes</a>
+                </h4>
+                <div class="post__meta d-flex">
+                  <span>Mumbai</span>
+                  <div><a href="#">Educational</a></div>
+                </div>
+                <p class="post__desc">
+                  <b>Project Overview:</b>
+                  <br>Installed a compact CCTV system.
+                  <br>
+                  <b>Scope of Work:</b><br>
+                  8-channel CCTV installation
+                  <br>
+                  <b>Result:</b><br>
+                  Improved classroom and premises monitoring.
+                </p>
+                <a href="#" class="btn btn__secondary btn__outlined">
+                  <i class="icon-arrow-right"></i>
+                  <span>View Project</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 10 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 project-item page-2" data-category="industry">
+            <div class="post-item">
+              <div class="post__img" style="height:250px;overflow:hidden;">
+                <a href="#">
+                  <img
+                    src="https://ichef.bbci.co.uk/news/480/cpsprodpb/8578/production/_129186143_gettyimages-1231662201-594x594.jpg.webp"
+                    style="width:100%;height:100%;object-fit:cover;">
+                </a>
+                <div class="post__meta-cat">
+                  <a href="#">Construction Security</a>
+                </div>
+              </div>
+              <div class="post__body">
+                <h4 class="post__title">
+                  <a href="#">SK Group Constructions</a>
+                </h4>
+                <div class="post__meta d-flex">
+                  <span>Multiple Sites</span>
+                  <div><a href="#">Builder / Construction</a></div>
+                </div>
+                <p class="post__desc">
+                  <b>Project Overview:</b><br>
+                  Executed multi-location security installations.
+                <ul></ul>
+                <b>Scope of Work:</b>
+                <ul>
+                  <li>Installed 4MP IP cameras</li>
+                  <li>Biometric attendance systems</li>
+                  <li>Deployment across 3 sites and 1 office</li>
+                </ul>
+                <b>Result:</b><br>
+                Enhanced site security and workforce management with centralized monitoring.
+                </p>
+                <a href="#" class="btn btn__secondary btn__outlined"><span>View Project</span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 11 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 project-item page-2" data-category="hospital">
+            <div class="post-item">
+              <div class="post__img" style="height:250px;overflow:hidden;">
+                <a href="#"><img src="assets/test/paras-projects-p5.jpg"></a>
+                <div class="post__meta-cat"><a href="#">Healthcare Security</a></div>
+              </div>
+              <div class="post__body">
+                <h4 class="post__title">
+                  <a href="#">Kirit Nursing Home</a>
+                </h4>
+                <div class="post__meta d-flex">
+                  <span class="post__meta-date">Mumbai</span>
+                  <div class="post__meta-author"><a href="#">Healthcare</a></div>
+                </div>
+                <p class="post__desc">
+                  <b>Project Overview:</b>
+                  <br>Delivered a comprehensive security and communication setup.
+                <ul></ul>
+                <b>Scope of Work:</b>
+                <ul>
+                  <li>High-resolution CCTV installation</li>
+                  <li>WiFi access points</li>
+                  <li>Biometric attendance system</li>
+                  <li>Intercom system</li>
+                </ul>
+                <b>Result:</b>
+                <br>Improved security, communication, and staff management efficiency.
+                </p>
+                <a href="#" class="btn btn__secondary btn__outlined">
+                  <i class="icon-arrow-right"></i>
+                  <span>View Project</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 12 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 project-item page-2" data-category="school">
+            <div class="post-item">
+              <div class="post__img" style="height:250px;overflow:hidden;">
+                <a href="#"><img src="assets/test/paras-projects-p6.jpg"></a>
+                <div class="post__meta-cat"><a href="#">Institution Security</a></div>
+              </div>
+              <div class="post__body">
+                <h4 class="post__title">
+                  <a href="#">Ruia High School</a>
+                </h4>
+                <div class="post__meta d-flex">
+                  <span class="post__meta-date">Mumbai</span>
+                  <div class="post__meta-author"><a href="#">Educational Institution</a></div>
+                </div>
+                <p class="post__desc">
+                  <b>Project Overview:</b>
+                  <br>Upgraded and repaired existing surveillance system.
+                <ul></ul>
+                <b>Scope of Work:</b>
+                <ul>
+                  <li>Complete system repair</li>
+                  <li>Installation of new cameras</li>
+                </ul>
+                <b>Result:</b>
+                <br>Restored and improved overall security system performance.
                 </p>
                 <a href="#" class="btn btn__secondary btn__outlined">
                   <i class="icon-arrow-right"></i>
@@ -314,9 +659,9 @@
         <div class="row">
           <div class="col-12 text-center">
             <nav class="pagination-area">
-              <ul class="pagination justify-content-center mb-0">
-                <li><a class="current" href="#">1</a></li>
-                <li><a href="#">2</a></li>
+              <ul class="pagination justify-content-center mb-0" id="pagination">
+                <li><a href="javascript:void(0)" onclick="showPage(1, this)" class="active">1</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage(2, this)">2</a></li>
                 <li><a href="#"><i class="icon-arrow-right"></i></a></li>
               </ul>
             </nav>
@@ -451,6 +796,64 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/chatbot.js"></script>
 
+  <!-- Filters Tabs -->
+  <script>
+    const buttons = document.querySelectorAll(".filter-btn");
+    const projects = document.querySelectorAll(".project-item");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+
+        // Active button highlight
+        buttons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.getAttribute("data-filter");
+
+        projects.forEach(project => {
+          const category = project.getAttribute("data-category");
+
+          if (filter === "all" || category === filter) {
+            project.style.display = "block";
+          } else {
+            project.style.display = "none";
+          }
+        });
+
+      });
+    });
+  </script>
+
+  <!-- Pagination Logic -->
+  <script>
+    function showPage(page, element) {
+
+      // hide all
+      document.querySelectorAll(".project-item").forEach(item => {
+        item.style.display = "none";
+      });
+
+      // show selected page
+      document.querySelectorAll(".page-" + page).forEach(item => {
+        item.style.display = "block";
+      });
+
+      // remove active from all pagination links
+      document.querySelectorAll(".pagination a").forEach(link => {
+        link.classList.remove("active");
+      });
+
+      // add active to clicked one
+      element.classList.add("active");
+    }
+
+    // default load page 1
+    document.addEventListener("DOMContentLoaded", function () {
+      const firstPageBtn = document.querySelector(".pagination a");
+      showPage(1, firstPageBtn);
+    });
+  </script>
+
   <!-- ================= PARAS CHATBOT ================= -->
   <div id="chatbot">
 
@@ -499,6 +902,7 @@
 
     </div>
   </div>
+
 </body>
 
 </html>

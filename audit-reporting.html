@@ -15,6 +15,179 @@
     <link rel="stylesheet" href="assets/css/libraries.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/chatbot.css">
+
+    <style>
+        /* ===== SECTION IMPROVEMENTS ===== */
+        .custom-section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .section-desc {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        /* ===== CARD STYLE ===== */
+        .custom-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            transition: 0.3s ease;
+            border: 1px solid #eee;
+            height: 100%;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ===== ICON STYLE ===== */
+        .custom-icon {
+            width: 60px;
+            height: 60px;
+            background: #65b530;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        /* ===== LIST STYLE ===== */
+        .custom-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .custom-list li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #65b530;
+            font-weight: bold;
+        }
+
+        /* ===== LIGHT BG ===== */
+        .bg-light-section {
+            background: #f9f9f9;
+        }
+
+        /* ===== 5 COLUMN LAYOUT FIX ===== */
+        .custom-5-col {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .custom-5-col .col-custom {
+            width: 20%;
+            padding: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .custom-5-col .col-custom {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .custom-5-col .col-custom {
+                width: 100%;
+            }
+        }
+
+        /* ===== CARD IMPROVEMENTS ===== */
+        .service-item {
+            transition: all 0.4s ease;
+            border-radius: 10px;
+            padding: 30px 20px;
+            height: 100%;
+            border: 1px solid #eee;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Hover Background Animation */
+        .service-item::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #65b530;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.4s ease;
+            z-index: 0;
+        }
+
+        .service-item:hover::before {
+            transform: scaleY(1);
+        }
+
+        /* Content above bg */
+        .service-item * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Icon Styling */
+        .service__icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: rgba(2, 89, 22, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .service__icon i {
+            font-size: 24px;
+            color: #65b530;
+            transition: 0.3s;
+        }
+
+        /* Text */
+        .service__title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .service__desc {
+            font-size: 14px;
+            line-height: 1.6;
+            transition: 0.3s;
+        }
+
+        /* Hover Effects */
+        .service-item:hover .service__title,
+        .service-item:hover .service__desc {
+            color: #fff;
+        }
+
+        .service-item:hover .service__icon {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .service-item:hover .service__icon i {
+            color: #fff;
+            transform: scale(1.2);
+        }
+    </style>
 </head>
 
 <body>
@@ -110,15 +283,14 @@
                             </span>
 
                             <h2 class="slide__title">
-                                Complete Evaluation Of Your Security Systems
+                                A thorough assessment and upgrade of your security systems
                             </h2>
 
                             <p class="slide__desc">
 
-                                Our security audit services ensure your CCTV, fire alarms, access control,
-                                and surveillance systems are operating effectively and providing
-                                maximum protection for your property.
-
+                                We offer thorough security audits to evaluate your existing system, find weaknesses, and
+                                suggest affordable improvements. Our objective is to enhance long-term safety,
+                                performance, and dependability with total transparency and professional advice.
                             </p>
 
                             <a href="contact-us.html" class="btn btn__primary btn__xl">
@@ -154,7 +326,7 @@
 
                             <h3 class="heading__title">
 
-                                Comprehensive Security Audit Services
+                                Why choose our Security Audit?
 
                             </h3>
 
@@ -181,11 +353,11 @@
 
                         <ul class="list-items-layout1 list-unstyled mt-20">
 
-                            <li class="list__item">CCTV Coverage Analysis</li>
-                            <li class="list__item">Recording & Storage Evaluation</li>
-                            <li class="list__item">Fire Alarm Inspection</li>
-                            <li class="list__item">Access Control Security Check</li>
-                            <li class="list__item">Security Risk Assessment</li>
+                            <li class="list__item">An honest and moral assessment of your current system</li>
+                            <li class="list__item">Clear reporting with no unspoken suggestions</li>
+                            <li class="list__item">Prioritize long-term value and client benefit</li>
+                            <li class="list__item">Practical and economical solutions</li>
+                            <li class="list__item">Excellent assistance both before and after the audit</li>
 
                         </ul>
 
@@ -193,7 +365,7 @@
 
                     <div class="col-lg-5 offset-lg-1">
 
-                        <img src="assets/test/home1.jpg" style="width:100%;">
+                        <img src="https://imgv2-2-f.scribdassets.com/img/document/430149069/original/0de3a1f462/1?v=1" style="width:100%;">
 
                     </div>
 
@@ -254,8 +426,7 @@
 
                                 <p class="service__desc">
 
-                                    Our experts inspect your property
-                                    and existing security infrastructure.
+                                    We inspect your entire property and existing security setup.
 
                                 </p>
 
@@ -279,8 +450,7 @@
 
                                 <p class="service__desc">
 
-                                    We analyze CCTV performance,
-                                    camera angles, storage and uptime.
+                                    We analyze camera performance, wiring, storage, and coverage quality.
 
                                 </p>
 
@@ -304,8 +474,7 @@
 
                                 <p class="service__desc">
 
-                                    Identify security vulnerabilities
-                                    and potential safety risks.
+                                    We identify vulnerabilities, blind spots , and safety risks
 
                                 </p>
 
@@ -329,8 +498,7 @@
 
                                 <p class="service__desc">
 
-                                    Receive a complete audit report
-                                    with improvement recommendations.
+                                    You receive a complete written report with GST billing and recommendations.
 
                                 </p>
 
@@ -359,37 +527,36 @@
 
                     <div class="col-lg-6">
 
-                        <img src="assets/test/cs2.jpg" style="width:100%;">
-
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2024/6/423956565/OG/UY/EJ/75452602/cctv-camera-maintenance-services-500x500.jpg" style="width:100%;">
                     </div>
 
                     <div class="col-lg-6">
 
                         <h3 class="heading__title mb-30">
 
-                            Why Choose Paras Security For Audit Reporting
+                            What we Inspect?
 
                         </h3>
 
                         <p class="heading__desc">
 
-                            With years of experience in security systems installation
-                            and maintenance, our team understands how to identify
-                            security weaknesses and optimize system performance.
+                            With extensive experience in security system installation and maintenance, our experts
+                            carefully assess every component to uncover vulnerabilities and ensure your system operates
+                            at peak efficiency.
 
                         </p>
 
                         <ul class="list-items-layout1 list-unstyled mt-20">
 
-                            <li class="list__item">Experienced security professionals</li>
+                            <li class="list__item">Performance and placement of CCTV cameras</li>
 
-                            <li class="list__item">Detailed system evaluation</li>
+                            <li class="list__item">Connectivity problems and the state of the wiring</li>
 
-                            <li class="list__item">Actionable improvement recommendations</li>
+                            <li class="list__item">Recording quality and storage capacity</li>
 
-                            <li class="list__item">Compliance with safety standards</li>
+                            <li class="list__item">Coverage gaps and blind spots</li>
 
-                            <li class="list__item">Reliable security consultation</li>
+                            <li class="list__item">Overall effectiveness of the system</li>
 
                         </ul>
 
@@ -408,6 +575,297 @@
         </section>
 
         <!-- =========================
+        COMMON ISSUES WE IDENTIFY
+        ========================== -->
+        <section class="about-layout1 pt-120 pb-90">
+            <div class="container">
+
+                <div class="row heading mb-50 text-center">
+                    <div class="col-12">
+                        <h3 class="heading__title">Common Problems We Solve</h3>
+                        <p class="heading__desc">
+                            We identify key issues that reduce the performance and effectiveness of your security
+                            systems.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-item text-center">
+                            <div class="service__body">
+                                <div class="service__icon">
+                                    <i class="fas fa-hdd"></i>
+                                </div>
+                                <h4 class="service__title">Storage Issues</h4>
+                                <p class="service__desc">Insufficient storage capacity affecting recording history.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-item text-center">
+                            <div class="service__body">
+                                <div class="service__icon">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <h4 class="service__title">Video Quality</h4>
+                                <p class="service__desc">Poor clarity and weak night vision performance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-item text-center">
+                            <div class="service__body">
+                                <div class="service__icon">
+                                    <i class="fas fa-crosshairs"></i>
+                                </div>
+                                <h4 class="service__title">Camera Angles</h4>
+                                <p class="service__desc">Improper positioning reducing monitoring efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-item text-center">
+                            <div class="service__body">
+                                <div class="service__icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <h4 class="service__title">Blind Spots</h4>
+                                <p class="service__desc">Uncovered areas creating potential security risks.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <hr style="border:0;height:1px;background:#e5e5e5;">
+
+        <!-- =========================
+        SPECIALIZED ANALYSIS
+        ========================== -->
+        <section class="services-layout2 pt-120 pb-120">
+            <div class="container">
+
+                <div class="row heading mb-70">
+                    <div class="col-lg-6">
+                        <h3 class="heading__title">Specialized Analysis</h3>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="heading__desc">
+                            Our in-depth analysis ensures every aspect of your system is optimized for safety and
+                            performance.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item">
+                            <div class="service__body">
+                                <div class="service__icon">
+                                    <i class="icon-cctv-camera"></i>
+                                </div>
+                                <h4 class="service__title">CCTV Coverage Analysis</h4>
+                                <ul class="list-items-layout1 list-unstyled mt-15">
+                                    <li class="list__item">Entry & Exit Monitoring</li>
+                                    <li class="list__item">Blind Spot Identification</li>
+                                    <li class="list__item">Focus on Accident-Prone Areas</li>
+                                    <li class="list__item">Optimized Coverage Planning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item">
+                            <div class="service__body">
+                                <div class="service__icon">
+                                    <i class="icon-download"></i>
+                                </div>
+                                <h4 class="service__title">Recording & Storage</h4>
+                                <ul class="list-items-layout1 list-unstyled mt-15">
+                                    <li class="list__item">Frame Rate Optimization</li>
+                                    <li class="list__item">Storage Planning</li>
+                                    <li class="list__item">System Configuration Improvements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item">
+                            <div class="service__body">
+                                <div class="service__icon">
+                                    <i class="icon-alert"></i>
+                                </div>
+                                <h4 class="service__title">Fire Alarm Inspection</h4>
+                                <ul class="list-items-layout1 list-unstyled mt-15">
+                                    <li class="list__item">Zone-wise Analysis</li>
+                                    <li class="list__item">Device Function Checks</li>
+                                    <li class="list__item">Safety Compliance Verification</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <hr style="border:0;height:1px;background:#e5e5e5;">
+
+        <!-- =========================
+        RECOMMENDATIONS
+        ========================== -->
+        <section class="about-layout1 pb-120">
+            <div class="container">
+
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6">
+                        <img src="assets/test/cs2.jpg" style="width:100%;">
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h3 class="heading__title mb-30">
+                            Smart Recommendations That Save Your Cost
+                        </h3>
+
+                        <p class="heading__desc">
+                            We provide practical and cost-effective solutions based on your system requirements and
+                            condition.
+                        </p>
+
+                        <ul class="list-items-layout1 list-unstyled mt-20">
+                            <li class="list__item">Reposition cameras to improve coverage</li>
+                            <li class="list__item">Upgrade only when necessary</li>
+                            <li class="list__item">Repair wiring instead of replacing when possible</li>
+                            <li class="list__item">Replace outdated components only when required</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <hr style="border:0;height:1px;background:#e5e5e5;">
+
+        <!-- =========================
+        WHO WE SERVE
+        ========================== -->
+        <section class="services-layout2 pt-120 pb-120">
+            <div class="container">
+
+                <div class="row heading mb-70 text-center">
+                    <div class="col-12">
+                        <h3 class="heading__title">Who Needs Our Audit Services?</h3>
+                        <p class="heading__desc">
+                            Our audit services are designed for environments where safety,
+                            surveillance, and system reliability are critical.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="custom-5-col text-center">
+
+                    <!-- Homes -->
+                    <div class="col-custom">
+                        <div class="service-item">
+                            <div class="service__icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h5 class="service__title">Homes</h5>
+                            <p class="service__desc">
+                                Complete protection for your family with reliable surveillance coverage.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Offices -->
+                    <div class="col-custom">
+                        <div class="service-item">
+                            <div class="service__icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h5 class="service__title">Offices & Businesses</h5>
+                            <p class="service__desc">
+                                Secure your workplace with monitoring and access control systems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Industries -->
+                    <div class="col-custom">
+                        <div class="service-item">
+                            <div class="service__icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h5 class="service__title">Industrial Areas</h5>
+                            <p class="service__desc">
+                                Protect large-scale operations and high-value industrial assets.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Schools -->
+                    <div class="col-custom">
+                        <div class="service-item">
+                            <div class="service__icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <h5 class="service__title">Schools & Colleges</h5>
+                            <p class="service__desc">
+                                Ensure campus safety with smart monitoring and secure environments.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Commercial -->
+                    <div class="col-custom">
+                        <div class="service-item">
+                            <div class="service__icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <h5 class="service__title">Commercial Spaces</h5>
+                            <p class="service__desc">
+                                Enhance retail security and prevent theft with effective surveillance.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================
+        FINAL CTA
+        ========================== -->
+        <!-- <section class="cta-layout3 bg-primary text-center py-80">
+            <div class="container">
+                <h3 class="color-white mb-20">
+                    Complete Transparency. Practical Solutions. Better Security
+                </h3>
+                <p class="color-white mb-30">
+                    We don’t just inspect — we improve your entire security system with honest advice,
+                    detailed reporting, and solutions tailored to your budget.
+                </p>
+                <a href="contact-us.html" class="btn btn__white btn__xl">
+                    Book Security Audit
+                </a>
+            </div>
+        </section> -->
+
+        <!-- =========================
         CTA SECTION
         ========================= -->
         <section class="cta-layout3 bg-primary text-center py-80">
@@ -422,14 +880,14 @@
 
                 <p class="color-white mb-30">
 
-                    Let our experts evaluate your security infrastructure
-                    and provide recommendations to improve protection.
+                    Get a complete evaluation of your system with expert recommendations to improve safety and
+                    performance.
 
                 </p>
 
                 <a href="contact-us.html" class="btn btn__white btn__xl">
 
-                    Schedule Your Audit Today
+                    Book Security Audit
 
                 </a>
 
@@ -532,7 +990,7 @@
 
                         <div class="col-sm-12 col-md-6">
                             <div class="footer__copyrights">
-                                <span style="color: #025916;">&copy; 2026 - Paras Security Systems. All Rights
+                                <span style="color: #65b530;">&copy; 2026 - Paras Security Systems. All Rights
                                     Reserved.</span>
                             </div>
                         </div>
